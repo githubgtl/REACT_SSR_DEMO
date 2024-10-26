@@ -15,7 +15,7 @@
   \********************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconst {\n  useState\n} = React;\nconsole.log(useState, typeof useState);\nfunction App() {\n  // let count = 1\n  const [count, setCount] = useState(0);\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Hello World\"), /*#__PURE__*/React.createElement(\"button\", {\n    onClick: () => setCount(count + 1)\n  }, \"+\"), /*#__PURE__*/React.createElement(\"div\", null, count));\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://react_ssr_demo/./src/App.js?");
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconst {\n  useState\n} = React;\nfunction App() {\n  // const [count, setCount] = useState(0);\n\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Hello World\"));\n}\nmodule.exports = /*#__PURE__*/React.createElement(App, null);\n\n//# sourceURL=webpack://react_ssr_demo/./src/App.js?");
 
 /***/ }),
 

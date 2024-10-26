@@ -5,9 +5,7 @@ const express = require("express");
 const { renderToString } = require('react-dom/server');
 function render(req, res){
     res.setHeader('Content-Type', 'text/html');
-    console.log(App);
-    
-    const app = RenderMarkUp(renderToString(App()));
+    const app = RenderMarkUp(renderToString(App));
     res.send(app);
 }
 
