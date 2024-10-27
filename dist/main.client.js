@@ -15,7 +15,7 @@
   \*********************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconst {\n  useState\n} = React;\nfunction App() {\n  const [count, setCount] = useState(0);\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Hello World\"), /*#__PURE__*/React.createElement(\"button\", {\n    onClick: () => setCount(count + 1)\n  }, \"+\"), /*#__PURE__*/React.createElement(\"div\", null, count));\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://react_ssr_demo/./src/APP.jsx?");
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconst {\n  useState\n} = React;\nfunction App() {\n  const [count, setCount] = useState(0);\n  console.log(\"xxxx\");\n  return /*#__PURE__*/React.createElement(\"div\", {\n    id: \"root\"\n  }, /*#__PURE__*/React.createElement(\"h1\", null, count), /*#__PURE__*/React.createElement(\"button\", {\n    onClick: () => setCount(count + 1)\n  }, \"+\"));\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://react_ssr_demo/./src/APP.jsx?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/inde
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const ReactDOM = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nconst App = __webpack_require__(/*! ./APP.jsx */ \"./src/APP.jsx\");\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconsole.log(1);\nconst domNode = document.getElementById('root');\nconsole.log(ReactDOM.hydrate);\nReactDOM.hydrate(/*#__PURE__*/React.createElement(APP, null), domNode);\n\n//# sourceURL=webpack://react_ssr_demo/./src/main.jsx?");
+eval("const ReactDOM = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nconst App = __webpack_require__(/*! ./APP.jsx */ \"./src/APP.jsx\");\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconst domNode = document.getElementById('root');\ndebugger;\nReactDOM.hydrateRoot(domNode, /*#__PURE__*/React.createElement(App, null));\n\n//# sourceURL=webpack://react_ssr_demo/./src/main.jsx?");
 
 /***/ }),
 

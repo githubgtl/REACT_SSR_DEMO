@@ -13,8 +13,7 @@ module.exports = merge(baseOption,{
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "../src/index.html"),
             filename: "index.html",
-			inject:'body',
-			scriptLoading: 'defer'
+			inject:false
         })
     ],
 	resolve: {

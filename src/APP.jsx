@@ -1,13 +1,14 @@
 const React = require('react');
-const {useState} = React
+const {useState} = React;
+
 function App() {
-    const [ count, setCount ] = useState(0)
+    const [ count, setCount ] = useState(0);
+	console.log("xxxx")
     return (
-        <div>
-            <h1>Hello World</h1>
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <div>{count}</div>
-        </div>
+		<div id='root'>
+			<h1>{count}</h1>
+			<button onClick={() => setCount(count + 1)}>+</button>
+		</div>
     );
 }
 
