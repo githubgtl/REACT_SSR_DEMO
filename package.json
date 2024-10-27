@@ -4,10 +4,10 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build":"rimraf dist && npm run build:client",
+		"build":"rimraf dist && npm run build:client && npm run build:serve",
 		"build:client": "npx webpack --config ./build/webpack.config.client.js",
 		"build:serve": "npx webpack --config ./build/webpack.config.server.js",
-		"dev": "rimraf dist && npm run build && node ./server.js"
+		"dev": "rimraf dist && npm run build && node ./dist/main.server.js"
 	},
 	"keywords": [],
 	"author": "",

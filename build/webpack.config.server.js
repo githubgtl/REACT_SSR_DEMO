@@ -4,7 +4,7 @@ const { merge } = require('webpack-merge');
 const baseOption = require('./webpack.config.base');
 
 module.exports = merge(baseOption,{
-    entry: path.resolve(__dirname, "../src/serverApp.js"),
+    entry: path.resolve(__dirname, "../src/server.jsx"),
 	output: {
 		path: path.resolve(__dirname, "../dist"),
 		filename: "[name].server.js",
@@ -13,10 +13,13 @@ module.exports = merge(baseOption,{
 		},
 	},
 	target: "node",
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, "../src/index.html"),
-            filename: "index.html",
-        })
-    ]
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         template: path.join(__dirname, "../src/index.html"),
+    //         filename: "index.html",
+    //     })
+    // ],
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	}
 })

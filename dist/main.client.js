@@ -9,24 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/APP.js":
-/*!********************!*\
-  !*** ./src/APP.js ***!
-  \********************/
+/***/ "./src/APP.jsx":
+/*!*********************!*\
+  !*** ./src/APP.jsx ***!
+  \*********************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nfunction App() {\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Hello World\"), /*#__PURE__*/React.createElement(\"button\", {\n    onClick: () => setCount(count + 1)\n  }, \"+\"), /*#__PURE__*/React.createElement(\"div\", null));\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://react_ssr_demo/./src/APP.js?");
+eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconst {\n  useState\n} = React;\nfunction App() {\n  const [count, setCount] = useState(0);\n  return /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Hello World\"), /*#__PURE__*/React.createElement(\"button\", {\n    onClick: () => setCount(count + 1)\n  }, \"+\"), /*#__PURE__*/React.createElement(\"div\", null, count));\n}\nmodule.exports = App;\n\n//# sourceURL=webpack://react_ssr_demo/./src/APP.jsx?");
 
 /***/ }),
 
-/***/ "./src/main.js":
-/*!*********************!*\
-  !*** ./src/main.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/main.jsx":
+/*!**********************!*\
+  !*** ./src/main.jsx ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _APP_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./APP.js */ \"./src/APP.js\");\n/* harmony import */ var _APP_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_APP_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nconst domNode = document.getElementById('root');\n(0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.hydrateRoot)(domNode, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement((_APP_js__WEBPACK_IMPORTED_MODULE_1___default()), null));\n\n//# sourceURL=webpack://react_ssr_demo/./src/main.js?");
+eval("const ReactDOM = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nconst App = __webpack_require__(/*! ./APP.jsx */ \"./src/APP.jsx\");\nconst React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nconsole.log(1);\nconst domNode = document.getElementById('root');\nconsole.log(ReactDOM.hydrate);\nReactDOM.hydrate(/*#__PURE__*/React.createElement(APP, null), domNode);\n\n//# sourceURL=webpack://react_ssr_demo/./src/main.jsx?");
 
 /***/ }),
 
@@ -137,46 +136,6 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -191,7 +150,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/main.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/main.jsx");
 /******/ 	
 /******/ })()
 ;

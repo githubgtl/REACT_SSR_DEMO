@@ -1,28 +1,26 @@
 const fs = require("fs");
 const path = require("path");
-const App = require('./src/serverApp');
+const App = require('./APP.jsx');
 const express = require("express");
+const React = require('react');
 const { renderToString } = require('react-dom/server');
 
 function render(req, res){
     res.setHeader('Content-Type', 'text/html');
-	// console.log(App)
 
 	const html = `
-	<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Document</title>
-			<script src="./dist/main.client.js" defer></script>
-		</head>
-		<body>
-			<div id="root">${renderToString(App)}</div>
-		</body>
-		</html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<script defer src="./main.client.js"></script>
+		<div id="root">${renderToString(React.createElement(App))}</div>
+	</body>
+</html>
 	`
-	
     res.send(html);
 }
 

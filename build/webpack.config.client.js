@@ -4,7 +4,7 @@ const baseOption = require('./webpack.config.base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(baseOption,{
-    entry: path.resolve(__dirname, "../src/main.js"),
+    entry: path.resolve(__dirname, "../src/main.jsx"),
 	output: {
 		path: path.resolve(__dirname, "../dist"),
 		filename: "[name].client.js",
@@ -16,5 +16,8 @@ module.exports = merge(baseOption,{
 			inject:'body',
 			scriptLoading: 'defer'
         })
-    ]
+    ],
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	}
 })
