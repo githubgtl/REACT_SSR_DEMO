@@ -9,6 +9,7 @@
 		"build:serve": "npx webpack --config ./build/webpack.config.server.js",
 		"dev": "rimraf dist && npm run build && npx nodemon ./dist/main.server.js"
 	},
+	"type": "commonjs",
 	"keywords": [],
 	"author": "",
 	"license": "ISC",

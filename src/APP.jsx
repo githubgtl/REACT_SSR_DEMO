@@ -3,7 +3,6 @@ const {useState} = React;
 
 function App() {
     const [ count, setCount ] = useState(0);
-	console.log("xxxx")
     return (
 		<div id='root'>
 			<h1>{count}</h1>

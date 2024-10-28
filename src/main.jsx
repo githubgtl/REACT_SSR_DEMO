@@ -1,7 +1,8 @@
-const ReactDOM = require('react-dom/client');
-const App = require('./APP.jsx');
+// const { hydrate } = require('react-dom');
+const { hydrateRoot } = require('react-dom/client');
+
+const App = require('./App.jsx');
 const React = require('react');
 
-const domNode = document.getElementById('root');
-debugger
-ReactDOM.hydrateRoot(domNode,<App></App>);
+// hydrate(<App></App>,document.getElementById('root'));
+hydrateRoot(document.getElementById('root'),<App></App>);

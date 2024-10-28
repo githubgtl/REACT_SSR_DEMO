@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const App = require('./APP.jsx');
+const App = require('./App.jsx');
 const express = require("express");
 const React = require('react');
 const { renderToString } = require('react-dom/server');
